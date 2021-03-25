@@ -1,0 +1,29 @@
+* {
+    font-family:Arial, Helvetica, sans-serif;
+    background-color:rgb(252, 243, 228);
+    text-align : center;
+}
+.blog-header {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 48pt;
+    color:rgb(255, 160, 149);
+    background:rgb(255, 220, 189);
+    height: 100px;
+    padding-top: 25px;
+}
+.log-in {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.blog-footer {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#QUIZE {
+background-color:rgb(255, 179, 179);
+color:rgb(254, 255, 187);
+width: 600px;
+height: 600px; 
+text-align: center;
+display:inline-block;
+}

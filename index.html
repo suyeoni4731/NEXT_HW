@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meata charset="UTF-8">
+        <meata name="viewport" content="wide=device-width, initial-scale=1.0">
+        <title>YOMI's blog</title>
+    </head>
+    <body>
+        <link rel="stylesheet" href="./index.css">
+        <div class="blog-header">YOMI's blog</div>
+        <div class="log-in">
+            <form action="server.html" method="GET">
+            <label for="id">ID</label>
+            <input type="text" id="id" name="id"/>
+            <lable for="password">Password</lable>
+            <input type="password" id="password" name="password"/>
+            <input type="submit" value="log in"/><br>
+            </form>
+        </div>
+        <img src="./images/river.jpg" alt="han river" />
+        <style>
+            h3 {
+            font-size: 12px;
+            color:rosybrown; 
+            }
+            p {
+            color:rgb(255, 179, 179);
+            font-size: 24px;
+            text-align: center;
+            font-weight: 600;
+            }
+            li {
+            background-color:rgb(255, 179, 179);
+            color:rgb(254, 255, 187);
+            width: 200px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            font-size: 15px;
+            border-radius: 5px;
+            display:inline-block;
+            }
+            form {
+                font-family: Helvetica;
+                color:rosybrown;
+            }
+        </style>
+        <p>INTRODUCE</p>
+        <h3>
+            안녕하세요 저는 성수연이라고 합니다<br>
+            그냥 따라하다가<br>
+            직접 만들어보니까 헷갈리는게 많네요<br>
+            앞으로 더 힘낼게요 ^__^<br>
+        </h3>
+            <p>HOBBY</p>
+            <ul>
+                <li>전시회 관람</li>
+                <li>아이패드 드로잉</li>
+                <li>영상편집</li>
+            </ul>
+            <p>QUIZE</p>
+                <form action="server.html" method="GET">
+                <lable for="radio">제가 좋아하는 음료는 무엇일까요?</lable><br>
+                <h3></h3>
+                <input type="radio" name="lang"> COFFEE<br>
+                <h3></h3>
+                <input type="radio" name="lang"> BEER<br>
+                <h3></h3>
+                <input type="radio" name="lang"> WATER<br>
+                <h1></h1>
+                <input type="submit" value="submit"/>
+                </form>
+        <div class="blog-footer">
+            <a href="https://www.instagram.com/_sueyeoni">
+            @_sueyeoni
+            </a>
+        </div>
+    </body>
+    </head>
+</html>
