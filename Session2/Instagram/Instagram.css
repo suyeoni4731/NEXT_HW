@@ -1,0 +1,58 @@
+* {
+    font-family: 'Noto Sans', sans-serif;
+    color: white;
+}
+.screen {
+    width: 480px;
+    height: 960px;
+    margin: auto;
+    padding: 5px;
+    background-color: black;
+}
+.id {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;;
+    margin:20px;
+}
+.profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+    padding-right: 40px;
+    align-items: center;
+    text-align: center;
+}
+.hb_flower {
+    padding-left: 10px;
+    font-size: 8;
+}
+.탭 {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 20px;
+    align-items: center;
+}
+.팔로우{
+    border-radius: 5px;
+    width: 205px;
+    height: 30px;
+    background-color: rgb(73, 85, 255);
+    padding-top: 4px;
+    text-align: center;
+}
+.메시지{
+    border-radius: 5px;
+    width: 205px;
+    height: 30px;
+    border: 1px solid white;
+    padding-top: 4px;
+    text-align: center;
+}
+.bottom_ar {
+
+}

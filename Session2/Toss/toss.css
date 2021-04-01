@@ -1,0 +1,58 @@
+* {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+.container {
+    display: flex;
+    width: 960px;
+    height: 520px;
+    margin-top: 30px;
+    margin-left: 100px;
+    align-items: center;
+}
+.bank {
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+}
+.bank_money {
+    display: flex;
+    box-shadow: 0 30px 60px 12px rgb(0 0 33 / 5%), 0 4px 24px 0 rgb(0 0 33 / 5%), 0 0 1px 0 rgb(0 0 33 / 9%);
+    border-radius: 15px;
+    width: 400px;
+    height: 70px;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+img {
+    margin-left: 15px;
+}
+.bank_name {
+    margin-left: 15px;
+    font-size: 15px;
+    color:rgb(67, 75, 83);
+}
+.money {
+    display: flex;
+    justify-content: right;;
+    margin-left: 180px;
+    font-size: 12px;
+    font-weight: 800;
+    color:rgb(67, 75, 83);
+}
+.h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color:rgb(67, 75, 83);
+}
+.h2 {
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+.h3 {
+    font-size: 12px;
+    font-weight: bold;
+    color: dodgerblue;
+    margin-top: 15px;
+}
