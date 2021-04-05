@@ -1,0 +1,268 @@
+body {
+    width: 375px;
+    height: 812px;
+}
+.body {
+    background-color: #dadde1;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 375px;
+    height: 40px;
+    background-color:rgb(0, 73, 146); 
+    color:white;
+}
+.search {
+    display: flex;
+    width: 260px;
+    height: 25px;
+    justify-content: center;
+    text-align: center;
+    padding-top: 2.6=5px;
+    border-bottom: 1px solid white;
+}
+.menu {
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    padding: 10px;
+    opacity: 60%;
+    border-bottom: 2px solid gray;
+}
+.upload {
+    display: flex;
+    width: 375px;
+    height: 40px;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e7e8e9;
+    background-color: white;
+}
+.write {
+    display: flex;
+    width: 255px;
+    height: 30px;
+    border: 1px solid #ccd0d5;
+    border-radius: 20px;
+    padding-left: 15px;
+    align-items: center;
+    font-size: 14px;
+    color: #5a5c61;
+    background-color: white;
+}
+.photo {
+    display: flex;
+    flex-flow: column;
+    opacity: 60%;
+    font-size: 13px;
+    font-weight: bold;
+}
+.story_txt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    margin-top: 10px;
+}
+.story {
+    font-size: 14px;
+    font-weight: bold;
+}
+.history {
+    font-size: 14px;
+    opacity: 60%;
+    align-items: center;
+}
+.story_img {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+}
+.story_img_1 {
+    background-image: url(https://image-cdn.hypb.st/https%3A%2F%2Fkr.hypebeast.com%2Ffiles%2F2018%2F12%2Fart-monster-1.jpg?w=1600&cbr=1&q=90&fit=max);
+    width: 90px;
+    border-radius: 20px;
+    color: white;
+    font-size: 12px;
+    font-weight: 900;
+    padding-top: 140px;
+    padding-bottom: 5px;
+    padding-left: 4px;
+    margin-right: 5px;
+}
+.story_img_2 {
+    background-image: linear-gradient(to top, black, gray, white);
+    width: 90px;
+    border-radius: 20px;
+    color: white;
+    font-size: 12px;
+    font-weight: 900;
+    padding-top: 140px;
+    padding-bottom: 5px;
+    padding-left: 4px;
+    margin-right: 5px;
+}
+.story_img_3 {
+    background-image: linear-gradient(to top, black, gray, white);
+    width: 90px;
+    border-radius: 20px;
+    color: white;
+    font-size: 12px;
+    font-weight: 900;
+    padding-top: 140px;
+    padding-bottom: 5px;
+    padding-left: 4px;
+    margin-right: 5px;
+}
+.story_img_4 {
+    background-image: linear-gradient(to top, black, white);
+    width: 90px;
+    border-radius: 20px;
+    color: white;
+    font-size: 12px;
+    font-weight: 900;
+    padding-top: 140px;
+    padding-bottom: 5px;
+    padding-left: 4px;
+    margin-right: 5px;
+}
+.page_1_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    font-size: 10px;
+    padding: 10px;
+}
+.page_1_content {
+    margin-left: 10px;
+}
+.page_1_name {
+    width: 270px;
+    height: auto;
+    font-size: 12px;
+    font-weight: bold;
+}
+.page_1_time {
+    display: flex;
+    width: 270px;
+    height: auto;
+    font-size: 10px;
+    opacity: 60%;
+    align-items: center;
+}
+.page_1_body {
+    background-color: white;
+    font-size: 14px;
+}
+.page_1_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    background-color: white;
+    padding: 5px;
+    border-bottom: 1px solid #e7e8e9;
+}
+.page_1_footer_icon {
+    width: 380px;
+    height: 40px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.page_1_footer_icon_li {
+    background-color: white;
+    opacity: 60%;
+}
+.page_1_footer_icon_co {
+    background-color: white;
+    opacity: 60%;
+}
+.page_1_footer_icon_sh {
+    background-color: white;
+    opacity: 60%;
+}
+.page_2_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    font-size: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+.page_2_content {
+    margin-left: 10px;
+}
+.page_2_name {
+    width: 270px;
+    height: auto;
+    font-size: 12px;
+    font-weight: bold;
+}
+.page_2_time {
+    display: flex;
+    width: 270px;
+    height: auto;
+    font-size: 10px;
+    opacity: 60%;
+    align-items: center;
+}
+.page_2_body {
+    background-color: white;
+    font-size: 14px;
+}
+.page_2_body_img {
+    display: grid;
+    grid-template-columns: 180px 180px;
+    grid-gap: 4px;
+}
+.page_2_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    background-color: white;
+    padding: 5px;
+    border-bottom: 1px solid #e7e8e9;
+}
+.page_2_footer_icon {
+    width: 380px;
+    height: 40px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.page_2_footer_icon_li {
+    background-color: white;
+    opacity: 60%;
+}
+.page_2_footer_icon_co {
+    background-color: white;
+    opacity: 60%;
+}
+.page_2_footer_icon_sh {
+    background-color: white;
+    opacity: 60%;
+}
