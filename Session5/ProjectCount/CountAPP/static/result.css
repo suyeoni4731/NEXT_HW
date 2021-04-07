@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+}
+
+textarea {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+p {
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 600px;
+}
+
+#total_len {
+    color:tomato;
+}
