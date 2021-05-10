@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'new.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="body">
+    <form action="" method="post">
+        {% csrf_token %}
+        <div>
+            <label for="title">Schedule</label>
+            <input type="text" id="title" name="title"  placeholder="제목을 입력해주세요.">
+        </div>
+        <div>
+            <label for="content">Detail</label>
+            <br>
+            <textarea name="content" id="content" cols="40" rows="20" placeholder="내용을 입력해주세요."></textarea>
+        </div>
+        <div>
+            <label for="date">Due date</label>
+            <input type="date" id="date" name="date">
+        </div>
+        <button type="submit">작성하기</button>
+    </form>
+    </div>
+</body>
+</html>
