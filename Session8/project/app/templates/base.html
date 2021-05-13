@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+    {% block css %}
+
+    {% endblock css %}
+</head>
+<div class="nav-bar">
+    <span id= "home"><a href="{% url 'home' %}">Home</a></span>
+    <span id= "new"><a href="{% url 'new' %}">할일 추가</a></span>
+</div>
+<body>
+<div class="body">
+    {% block content %}
+
+    {% endblock content %}
+</div>
+</body>
+</html>

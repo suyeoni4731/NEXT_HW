@@ -1,0 +1,71 @@
+* {
+    display: flex;
+    flex-direction: column;
+    font-family: 'East Sea Dokdo', cursive;
+    font-size: 48px;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.body {
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: auto;
+    border: 4px solid black;
+    margin-top: 50px;
+    padding-bottom: 100px;
+}
+
+.content {
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: auto;
+    padding-bottom: 50px;
+    border-bottom: 4px solid black;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 30px;
+    width: 100%;
+    height: auto;
+    padding-top: 50px;
+    margin-top: px;
+    background-color: black;
+    color: white;
+}
+
+#home {
+    padding-left: 50px;
+    padding-right:1080px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-bar a {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-bottom: 50px;
+    text-decoration: none;
+    color: white;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+
+
