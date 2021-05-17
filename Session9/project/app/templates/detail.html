@@ -16,30 +16,27 @@
         <h2>Due date</h2>
         {{ post.date }}
     </div>
-
-    {% if user.is_authenticated and post.author.pk == user.pk %}
     <div class ="button">
-        <a href="{% url 'edit' post.pk %}">Edit</a>
-        <a href="{% url 'delete' post.pk %}">Delete</a>
+        {% if user.is_authenticated and post.author.pk == user.pk %}
+        <span id="edit"><a href="{% url 'edit' post.pk %}">Edit</a></span>
+        <span id="delete"><a href="{% url 'delete' post.pk %}">Delete</a></span>
+        {% endif %}
     </div>
-    {% endif %}
-    
-    {% if user.is_authenticated %}
     <div class = "comment">
+    {% if user.is_authenticated %}
     <form method="POST">
         {% csrf_token %}
         <input type="text" name="content" placeholder="댓글을 입력해주세요">
         <button type="submit">댓글 쓰기</button>
     </form>
-    </div>
     {% endif %}
-    
+    </div>
     <div class="comment">
     {% for comment in post.comments.all %}
-    <li>{{ comment.content }}
-        {% if user.is_authenticated and comment.author.pk == user.pk %}
-        <a href="{% url 'delete_comment' post.pk comment.pk %}">삭제</a></li>
+    <li>{{ comment.content }}</li>
+        {% if user.is_authenticated and post.author.pk == user.pk %}
+        <a href="{% url 'delete_comment' post.pk comment.pk %}">삭제</a>
         {% endif %}
-    </div>
     {% endfor %}
-{% endblock content %}
+    </div>
+{% endblock %}

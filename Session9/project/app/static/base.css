@@ -2,19 +2,22 @@
     display: flex;
     flex-direction: column;
     font-family: 'East Sea Dokdo', cursive;
-    font-size: 48px;
+    font-size: 30px;
 }
 
 .nav-bar {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    font-size: 10px;
+    justify-content: space-between;
+    font-size: 30px;
     width: 100%;
     height: auto;
+    padding-top: 50px;
+    margin-top: px;
     background-color: black;
     color: white;
 }
+
 
 body {
     justify-content: center;
@@ -27,7 +30,7 @@ body {
 .body {
     justify-content: center;
     align-items: center;
-    width: 45%;
+    width: 60%;
     height: auto;
     border: 4px solid black;
     margin-top: 50px;
@@ -37,8 +40,21 @@ body {
 .content {
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 60%;
     height: auto;
     padding-bottom: 50px;
     border-bottom: 4px solid black;
 }
+
+a {
+    text-decoration: none;
+}
+
+.nav-bar a {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-bottom: 50px;
+    text-decoration: none;
+    color: white;
+}
+
