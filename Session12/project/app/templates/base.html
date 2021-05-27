@@ -1,0 +1,59 @@
+{% load static %}
+{% load socialaccount %}
+{% providers_media_js %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+    <title></title>
+    {% block css %}
+    {% endblock css %}
+
+</head>
+
+<body>
+    <div class="toggle">
+        <p class="menu" onclick="toggle_on()">Menu</p>
+    </div>
+    <div class="nav_bar">
+            <a class="nav_bar_list" href="{% url 'home' %}">Home</a>
+            {% if user.is_authenticated %}
+            <a class="nav_bar_list" href="{% url 'new' %}">Write</a>
+            <a class="nav_bar_list" href="{% url 'mypage' %}">안녕하세요, {{ user.username }}님</a>
+            <a class="nav_bar_list" href="{% url 'logout' %}">로그아웃</a>
+            {% else %}
+            <a class="nav_bar_list" href="{% url 'login' %}">log in</a>
+            <a class="nav_bar_list" href="{% provider_login_url 'kakao' %}">카카오 로그인</a>
+            <a class="nav_bar_list" href="{% url 'signup' %}">회원가입</a>
+            {% endif %}
+        </ul>
+    </div>
+
+    <script type="text/javascript">
+        const nav_bar = document.querySelector('.nav_bar');
+        nav_bar.classList.add('menus');
+        const menu = document.querySelector('.menu');
+
+        const toggle_on = (event) => {
+            if (menu.textContent == 'Menu') {
+                nav_bar.classList.remove('menus');
+                menu.textContent = '닫기';
+            }
+            else {
+                nav_bar.classList.add('menus');
+                menu.textContent = 'Menu';
+            };
+        };
+    </script>
+<div class="body">
+    {% block content %}
+
+    {% endblock content %}
+</div>
+</body>
+</html>

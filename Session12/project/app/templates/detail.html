@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block css %} {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'detail.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <h2>Schedule</h2>
+        {{ post.title }}
+    </div>
+    <div class="content">
+        <h2>Detail</h2>
+        {{ post.content }}
+    </div>
+    <div class="content">
+        <h2>Due date</h2>
+        {{ post.date }}
+    </div>
+    <div class ="button">
+        {% if user.is_authenticated and post.author.pk == user.pk %}
+        <span id="edit"><a href="{% url 'edit' post.pk %}">Edit</a></span>
+        <span id="delete"><a href="{% url 'delete' post.pk %}">Delete</a></span>
+        {% endif %}
+    </div>
+    <div class = "comment">
+    {% if user.is_authenticated %}
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="content" placeholder="댓글을 입력해주세요">
+        <button type="submit">댓글 쓰기</button>
+    </form>
+    {% endif %}
+    </div>
+    <div class="comment">
+    {% for comment in post.comments.all %}
+    <li>{{ comment.content }}</li>
+        {% if user.is_authenticated and post.author.pk == user.pk %}
+        <a href="{% url 'delete_comment' post.pk comment.pk %}">삭제</a>
+        {% endif %}
+    {% endfor %}
+    </div>
+{% endblock %}

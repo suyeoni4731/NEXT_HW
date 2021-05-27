@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block css %} {% load static %}
+    <link rel="stylesheet" href="{% static 'mypage.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1>Posts</h1>
+{% for post in posts %}
+    {% if user.is_authenticated and post.author.pk == user.pk %}
+        <div class="content">
+        <a href="{% url 'detail' post.pk %}">{{ post.title }}</a>
+        </div>
+    {% endif %} 
+{% endfor %}
+<div>
+
+<h1>Comments</h1>
+{% for comment in comments %}
+    {% if user.is_authenticated and comment.author.pk == user.pk %}
+        <div class="comment">
+        <a href="{% url 'detail' comment.post.pk %}">{{ comment.content }}</a>
+        </div>
+    {% endif %}
+{% endfor %} 
+</div>
+{% endblock content %}

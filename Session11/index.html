@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title" class="title">
+        배가 아파요
+    </h1>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script type="text/javascript">
+        const title = document.getElementById('title');
+
+        title1.innerHTML = '자스 재밌어요';
+        
+
+        const divs = document.querySelectorAll('div');
+
+        console.log(divs);
+        for (let i = 0; i < divs.length; i++) {
+            console.log(divs[i]);
+            const currentDiv = divs[i];
+            currentDiv.style.height = '100px';
+            currentDiv.style.fontSize = `${(i + 1) * 10}px`
+            currentDiv.innerHTML = `${1}번째 div`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block css %} {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'edit.css' %}">
+{% endblock %}
+
+
+{% block content%}
+    <form action="" method="post">
+        {% csrf_token %}
+        <div>
+            <label for="title">Schedule</label>
+            <input type="text" id="title" name="title" value="{{ post.title }}">
+        </div>
+        <div>
+            <label for="content">Detail</label>
+            <textarea name="content" onkeyup="count()" id="content" cols="40" rows="10">{{ post.content }}</textarea>
+        </div>
+        <div>
+            글자 수(공백 포함): <span class="count">0</span>
+        </div>
+        <div>
+            <label for="date">Due date</label>
+            <input type="date" id="date" name="date" value="{{ post.date }}">
+        </div>
+        <button type="submit">Edit</button>
+    </form>
+
+    <script type="text/javascript">
+        function count () {
+            document.querySelector('.count').textContent = document.querySelector('#content').value.length;
+        }
+    </script>
+</div>
+{% endblock %}
+
+
