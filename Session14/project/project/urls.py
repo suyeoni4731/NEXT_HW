@@ -15,20 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from app import views
 
 urlpatterns = [
-    path('registration/signup', views.signup, name="signup"),
-    path('registration/login', views.login, name="login"),
-    path('registration/logout', views.logout, name="logout"),
     path('admin/', admin.site.urls),
-    path('', views.home, name="home"),
-    path('new/', views.new, name="new"),
-    path('detail/<int:post_pk>', views.detail, name="detail"),
-    path('edit/<int:post_pk>', views.edit, name="edit"),
-    path('delete/<int:post_pk>', views.delete, name="delete"),
-    path('delete_comment/<int:post_pk>/<int:comment_pk>', views.delete_comment, name='delete_comment'),
-    path('accounts/', include('allauth.urls')),
-    path('mypage/', views.mypage, name="mypage"),
+    path('blog/', include('blog.urls')),
+    # blog/로 시작되는 url이면, blog하위에 있는 url을 불러온다. 
+    path('accoutns/', include('accounts.urls')),
 ]
-

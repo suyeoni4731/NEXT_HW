@@ -1,56 +1,43 @@
+{% load static %}
+{% load socialaccount %}
+{% providers_media_js %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% load static %}
-    {% load socialaccount %}
-    {% providers_media_js %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+    <title></title>
     {% block css %}
-
     {% endblock css %}
 </head>
+
 <body>
-<div class="nav-bar">
-<a class="menu" href="javascript:;">Menu</a></div>
-    <div class="nav-item">
-        <a href="{% url 'home' %}">Home</a>
-        {% if user.is_authenticated %}
-        <a href="{% url 'new' %}">할일 추가</a>
-        <a href="{% url 'mypage' %}">My page</a>
-        <div class="nav-item">안녕하세요, {{ user.username }}님 </div>
-        <a href="{% url 'logout' %}">로그아웃</a>
-        {% else %}
-        <a href="{% url 'login' %}">로그인</a>
-        <a href="{% provider_login_url 'kakao' %}">카카오 로그인</a>
-        <a href="{% url 'signup' %}">회원가입</a>
-        {% endif %}
+    <a class="menu" href="javascript:;">MENU</a>
+    <div class="menus">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'new' %}">할일 추가</a></li>
+            <li><a href="{% url 'mypage' %}">안녕하세요, {{ user.username }}님</a></li>
+            <li><a href="{% url 'logout' %}">로그아웃</a></li>
+            {% else %}
+            <li><a href="{% url 'login' %}">로그인</a></li>
+            <li><a href="{% provider_login_url 'kakao' %}">카카오 로그인</a></li>
+            <li><a href="{% url 'signup' %}">회원가입</a></li>
+            {% endif %}
+        </div>
     </div>
-</div>
-    <script>
-        const menu_list = document.querySelector(".nav-item")
-        const menu = document.querySelector(".nav-bar")
-        menu_list.classList.add("hidden")
-    
-        menu.addEventListener("click", () => {
-        if (menu.textContent == "메뉴") {
-            menu_list.classList.remove("hidden")
-            menu.textContent = "접기"
-        }
-        else {
-            menu_list.classList.add("hidden")
-            menu.textContent = "메뉴"
-        }
-    })
+    <script type="text/javascript"src="">
+
     </script>
 <div class="body">
     {% block content %}
 
     {% endblock content %}
 </div>
+
 </body>
 </html>
